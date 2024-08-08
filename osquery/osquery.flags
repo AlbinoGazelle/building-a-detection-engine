@@ -1,0 +1,8 @@
+--logger_plugin=aws_firehose
+--audit_allow_config=true
+--audit_allow_process_events=true
+--audit_allow_config=true
+--audit_persist=true
+--disable_audit=false
+--disable_events=false
+--enable_bpf_events=true
