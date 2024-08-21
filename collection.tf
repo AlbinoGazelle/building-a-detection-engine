@@ -143,7 +143,7 @@ resource "aws_instance" "linux_workstation" {
     ami           = "ami-0427090fd1714168b" # Amazon Linux 2023 AMI 2023.5.20240722.0 x86_64 HVM kernel-6.1
     instance_type = "t2.micro"
     // pass osquery bootstrap script to instance
-    user_data = file("${path.module}/osquery.sh")
+    user_data = file("${path.module}/osquery/osquery.sh")
     // provide subnet located in created VPC
     subnet_id = aws_subnet.public_subnet.id
     // SG allowing SSH access via EC2 Instance Connect
