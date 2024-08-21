@@ -10,13 +10,7 @@ Or you need to configure your own remote backend.
 https://spacelift.io/blog/terraform-backends
 **/
 terraform {
-    backend "s3" {
-        profile = "production-iamadmin"
-        bucket = "homelab-tf-prd-bckend-01"
-        key = "detect-lab/terraform.tfstate"
-        region = "us-east-1"
-        dynamodb_table = "terraform-state-locking"
-        encrypt = true
+    backend "local" {
     }
     required_providers {
       aws = {
